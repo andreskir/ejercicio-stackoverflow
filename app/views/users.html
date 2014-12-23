@@ -1,0 +1,31 @@
+<div class="users">
+  <ul class="media-list" ng-repeat='user in users'>
+    <li class="media">
+      <div class="pull-left">
+        <img ng-src='{{user.profile_image}}'/>
+      </div>
+      <div class="media-body">
+        <a href="">
+          <h4 class="media-heading">{{user.display_name}}</h4>
+        </a>
+        <div class='text-muted'>
+          <span>{{user.location}}</span>
+        </div>
+        <div>
+          <div class="badge" ng-if='user.badge_counts.gold > 0'>
+            <i class="fa fa-circle gold"></i>
+            <span>{{user.badge_counts.gold}}</span>
+          </div>
+          <div class="badge" ng-if='user.badge_counts.silver > 0'>
+            <i class="fa fa-circle silver"></i>
+            <span>{{user.badge_counts.silver}}</span>
+          </div>
+          <div class="badge" ng-if='user.badge_counts.bronze > 0'>
+            <i class="fa fa-circle bronze"></i>
+            <span>{{user.badge_counts.bronze}}</span>
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
