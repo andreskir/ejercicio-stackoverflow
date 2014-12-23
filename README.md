@@ -1,28 +1,20 @@
-ToDoApp
+Ejercicio Stackoverflow
 =======
 
 ### Introducción
-
-Esta aplicación es un típico To-Do.
-Para persistir las tareas se usa el localStorage del browser, de forma que no se borren al refrescar la página.
-Luego de analizar a la competencia y hacer muchas pruebas con prototipos, el equipo de User Experience llegó a la conculusión que esta aplicación tiene que permitir al usario agregar tareas, editarlas y eliminarlas, pero que no se persistan los cambios hasta que se haga click en el botón guardar. En caso de que el usuario no quiera guardar los cambios, solo debe refrescar la página.
+Esta es una aplicación que perminte navegar la información de usuarios y preguntas de stackoverlow a través de su API.
+[Ver documentación](https://api.stackexchange.com/docs)
 
 ### Objetivo
 
-1. Identificar al menos un problema de diseño y corregirlo.
-2. Desarrollar los tests unitarios faltantes.
-3. Por el momento esta aplicación cuenta con un único plan básico que es ilimitado. El desarrollador anterior llegó a implementar una serie de contadores que van registrando cada vez que se crea, edita o elimina una tarea. Se pide agregarle el plan gratuito y el plan premium y establecer límites para los diferentes planes. Crear los tests unitarios para esta nueva funcionalidad.
-
- **El plan gratuito** permite un máximo de 20 creaciones + editaciones, y no más de 5 eliminaciones.
- 
- **El plan básico** permite hasta 50 creaciones, hasta 50 ediciones y hasta 50 eliminaciones.
- 
- **El plan premium** es ilimitado.
-
- La aplicación no debería permitirle al usuario guardar los cambios si se excede de los límites del plan seleccionado. En ese caso habría que informarle al usuario que debería seleccionar un plan superior para poder guardar los cambios.
-
-####Restricciones
-  No se puede modificar el `taskRepository`
+1. Desarrollar la ficha de usuario: Al hacer click en el nombre de un usuario debería redirigir a otra vista donde debería mostrar:
+  Nombre de usuario, foto, reputación, listado de preguntas realizadas.
+  Por pregunta mostrar el título de la misma (con link a la página correspondiente de stackoverflow), 
+__last_activity_date__, __creation_date__, __votes__, __relevance__ y tags.
+2. Incluir un selector en la vista de usuario que permita reordenar las preguntas mostradas según: __last_activity_date__, __creation_date__, __votes__, __relevance__
+3. Modificar la vista con el listado de usuarios de forma que al hacer click en el nombre de un usuario redirija a la ficha solamente si el usuario tiene más de 75 gold badges. En caso contrario debería mostrar un mesjae de alerta que diga: "Solo se pueden ver las preguntas de los usuarios más grosos"
+   
+En todos los casos realizar los tests unitarios que crea necesarios. 
 
 ### Tecnologías
 
